@@ -98,7 +98,7 @@ export default function Product() {
       </div>
 
       <div className="view-more-wrapper">
-        <Link to="/SidebarCategory" className="view-more-button">View More</Link>
+        <Link to="/sidebar" className="view-more-button">View More</Link>
       </div>
     </div>
   );

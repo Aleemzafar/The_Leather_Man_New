@@ -7,6 +7,7 @@ import Gentswallet from "../gentswallet.jsx";
 import Leathercoats from "../longcoats.jsx";
 import Allproduct from '../allleatheritemss.jsx';
 import { motion, AnimatePresence } from 'framer-motion';
+import Navbar from './navbar.jsx';
 
 export default function SidebarCategory() {
   const [selectedCategory, setSelectedCategory] = useState('Allproduct');
@@ -46,31 +47,33 @@ export default function SidebarCategory() {
     { id: 'other', name: 'Other Products' }
   ];
 
-  return (
+  return (<>
+  
+    <Navbar/>
     <div className="sidebar-container">
       <motion.div 
         className="sidebarcategory"
         initial={{ x: -20, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-      >
+        >
         <h3 className="sidebar-title">Categories</h3>
         <ul>
           {categories.map((category) => (
             <motion.li
-              key={category.id}
-              onClick={() => handleCategoryClick(category.id)}
-              className={selectedCategory === category.id ? 'active' : ''}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            key={category.id}
+            onClick={() => handleCategoryClick(category.id)}
+            className={selectedCategory === category.id ? 'active' : ''}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
             >
               {category.name}
               {selectedCategory === category.id && (
                 <motion.div 
-                  className="underline"
-                  layoutId="underline"
-                  initial={false}
-                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                className="underline"
+                layoutId="underline"
+                initial={false}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 />
               )}
             </motion.li>
@@ -86,12 +89,13 @@ export default function SidebarCategory() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-          >
+            >
             {renderComponent()}
           </motion.div>
         </AnimatePresence>
       </div>
     </div>
+            </>
   );
 }
 

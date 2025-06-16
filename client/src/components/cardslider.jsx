@@ -10,7 +10,7 @@ const products = [
   { id: 2, name: 'Ladies Purse', price: '$89', image: '/images/ladiespurs3.png' },
 ];
 
-export default function CarSlider() {
+export default function CardSlider() {
   const sliderRef = useRef(null);
   const [animationClass, setAnimationClass] = useState('');
 

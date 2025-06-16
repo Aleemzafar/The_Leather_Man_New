@@ -7,7 +7,8 @@ import Product from "./components/product.jsx";
 import MidCategory from "./components/midcat.jsx";
 import BottomCategory from "./components/bottomcat.jsx";
 import AllCategoryVideo from "./components/flatvideo.jsx";
-import CardSlider from './components/carslider.jsx';
+import CardSlider from './components/cardslider.jsx';
+import Navbar from './components/navbar.jsx';
 
 export default function Home() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -34,6 +35,7 @@ export default function Home() {
 
     return (
        < div> 
+       <Navbar/>
         <div className={`topslider ${loaded ? 'active' : ''}`}>
             <div 
                 className="bg-image"

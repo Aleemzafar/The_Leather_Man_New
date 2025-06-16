@@ -19,7 +19,8 @@ function App() {
     {
       path: "/sidebar",
       element: <SidebarCategory/>
-    }
+    },
+   
   ])
   return (
    

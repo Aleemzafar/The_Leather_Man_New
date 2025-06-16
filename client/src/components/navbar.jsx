@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { FaCartShopping } from "react-icons/fa6";
+import { RiShoppingBag4Fill } from "react-icons/ri";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -22,25 +23,25 @@ const Navbar = () => {
           <div className="hidden md:flex gap-8 text-gray-700 font-medium">
             <Link
               to="/"
-              className="text-lg px-2 py-1 rounded-md hover:text-rose-600 hover:shadow-md transition-all duration-300"
+              className="text-lg px-2 py-1 rounded-md hover:shadow-md transition-all duration-300"
             >
               Home
             </Link>
             <Link
               to="/shop"
-              className="text-lg px-2 py-1 rounded-md hover:text-rose-600 hover:shadow-md transition-all duration-300"
+              className="text-lg px-2 py-1 rounded-md hover:shadow-md transition-all duration-300"
             >
               Shop
             </Link>
             <Link
               to="/about"
-              className="text-lg px-2 py-1 rounded-md hover:text-rose-600 hover:shadow-md transition-all duration-300"
+              className="text-lg px-2 py-1 rounded-md hover:shadow-md transition-all duration-300"
             >
               About Us
             </Link>
             <Link
               to="/contact"
-              className="text-lg px-2 py-1 rounded-md hover:text-rose-600 hover:shadow-md transition-all duration-300"
+              className="text-lg px-2 py-1 rounded-md hover:shadow-md transition-all duration-300"
             >
               Contact Us
             </Link>
@@ -48,7 +49,7 @@ const Navbar = () => {
 
           
           <div className="flex items-center gap-4">
-            <FaCartShopping className="text-2xl text-brown-700 hover:text-brown-900 transition duration-300 cursor-pointer" />
+            <RiShoppingBag4Fill className="text-3xl text-brown-700 hover:text-brown-900 transition duration-300 cursor-pointer" />  
             <button
               className="md:hidden focus:outline-none"
               onClick={() => setIsOpen(!isOpen)}
